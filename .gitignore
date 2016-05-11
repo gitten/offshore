@@ -23,5 +23,9 @@ erl_crash.dump
 # variables.
 /config/prod.secret.exs
 
-# Emacs
+# Unnecessary files, etc.
 *~
+.DS_Store
+
+# Data
+priv/repo/data
