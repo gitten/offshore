@@ -13,17 +13,23 @@ Ready to run in production? Please [check our deployment guides](http://www.phoe
 
 ## Notes:
   * Learned how to load CSV data into Ecto from @wsmoak:
-  ** http://wsmoak.net/2016/02/16/phoenix-ecto-seeds-csv.html
-  ** https://github.com/wsmoak/minty/blob/master/priv/repo/seeds.exs
+
+    http://wsmoak.net/2016/02/16/phoenix-ecto-seeds-csv.html
+
+    https://github.com/wsmoak/minty/blob/master/priv/repo/seeds.exs
 
 ## Bump to Phoenix 1.2-rc w/ Ecto 2.0.0-rc
   * https://gist.github.com/chrismccord/29100e16d3990469c47f851e3142f766
-  ** "...translate_error function was found in web/views/error_helpers.ex instead of web/gettext.ex"
+
+    "...translate_error function was found in web/views/error_helpers.ex instead of web/gettext.ex"
+
   * http://blog.plataformatec.com.br/2016/04/ecto-2-0-0-rc-is-out/
-  ** "Ecto 2.0 now requires an explicit :ecto_repos configuration for running tasks like ecto.migrate and others. Open up your config/config.exs and add:"
-  ````elixir
-  config :offshore, ecto_repos: [Offshore.Repo]
-  ````
+
+    "Ecto 2.0 now requires an explicit :ecto_repos configuration for running tasks like ecto.migrate and others. Open up your config/config.exs and add:"
+
+    ````elixir
+    config :offshore, ecto_repos: [Offshore.Repo]
+    ````
 
 ## Learn more
 
