@@ -1,0 +1,38 @@
+<h2>Listing addresses</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Address</th>
+      <th>Icij</th>
+      <th>Valid until</th>
+      <th>Country codes</th>
+      <th>Countries</th>
+      <th>Node</th>
+      <th>Sourceid</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for address <- @addresses do %>
+    <tr>
+      <td><%= address.address %></td>
+      <td><%= address.icij_id %></td>
+      <td><%= address.valid_until %></td>
+      <td><%= address.country_codes %></td>
+      <td><%= address.countries %></td>
+      <td><%= address.node_id %></td>
+      <td><%= address.sourceID %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: address_path(@conn, :show, address), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: address_path(@conn, :edit, address), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: address_path(@conn, :delete, address), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New address", to: address_path(@conn, :new) %>

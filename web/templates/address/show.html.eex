@@ -1,0 +1,43 @@
+<h2>Show address</h2>
+
+<ul>
+
+  <li>
+    <strong>Address:</strong>
+    <%= @address.address %>
+  </li>
+
+  <li>
+    <strong>Icij:</strong>
+    <%= @address.icij_id %>
+  </li>
+
+  <li>
+    <strong>Valid until:</strong>
+    <%= @address.valid_until %>
+  </li>
+
+  <li>
+    <strong>Country codes:</strong>
+    <%= @address.country_codes %>
+  </li>
+
+  <li>
+    <strong>Countries:</strong>
+    <%= @address.countries %>
+  </li>
+
+  <li>
+    <strong>Node:</strong>
+    <%= @address.node_id %>
+  </li>
+
+  <li>
+    <strong>Sourceid:</strong>
+    <%= @address.sourceID %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: address_path(@conn, :edit, @address) %>
+<%= link "Back", to: address_path(@conn, :index) %>

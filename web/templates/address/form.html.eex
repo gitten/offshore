@@ -1,0 +1,53 @@
+<%= form_for @changeset, @action, fn f -> %>
+  <%= if @changeset.action do %>
+    <div class="alert alert-danger">
+      <p>Oops, something went wrong! Please check the errors below.</p>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= label f, :address, class: "control-label" %>
+    <%= text_input f, :address, class: "form-control" %>
+    <%= error_tag f, :address %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :icij_id, class: "control-label" %>
+    <%= text_input f, :icij_id, class: "form-control" %>
+    <%= error_tag f, :icij_id %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :valid_until, class: "control-label" %>
+    <%= text_input f, :valid_until, class: "form-control" %>
+    <%= error_tag f, :valid_until %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :country_codes, class: "control-label" %>
+    <%= text_input f, :country_codes, class: "form-control" %>
+    <%= error_tag f, :country_codes %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :countries, class: "control-label" %>
+    <%= text_input f, :countries, class: "form-control" %>
+    <%= error_tag f, :countries %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :node_id, class: "control-label" %>
+    <%= number_input f, :node_id, class: "form-control" %>
+    <%= error_tag f, :node_id %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :sourceID, class: "control-label" %>
+    <%= text_input f, :sourceID, class: "form-control" %>
+    <%= error_tag f, :sourceID %>
+  </div>
+
+  <div class="form-group">
+    <%= submit "Submit", class: "btn btn-primary" %>
+  </div>
+<% end %>
