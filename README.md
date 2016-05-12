@@ -11,6 +11,11 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
 Ready to run in production? Please [check our deployment guides](http://www.phoenixframework.org/docs/deployment).
 
+## Notes:
+  * Learned how to load CSV data into Ecto from @wsmoak:
+  ** http://wsmoak.net/2016/02/16/phoenix-ecto-seeds-csv.html
+  ** https://github.com/wsmoak/minty/blob/master/priv/repo/seeds.exs
+
 ## Bump to Phoenix 1.2-rc w/ Ecto 2.0.0-rc
   * https://gist.github.com/chrismccord/29100e16d3990469c47f851e3142f766
   ** "...translate_error function was found in web/views/error_helpers.ex instead of web/gettext.ex"
