@@ -33,14 +33,12 @@ Ready to run in production? Please [check our deployment guides](http://www.phoe
 
 ## Generate
 
-  * mix phoenix.gen.html Address addresses address:string icij_id:string valid_until:string country_codes:string countries:string node_id:integer:unique sourceID:string
+  * mix phoenix.gen.html Address addresses address icij_id valid_until country_codes countries node_id:integer:unique sourceID
   * mix phoenix.gen.html Intermediary intermediaries name internal_id address valid_until country_codes countries status node_id:integer:unique sourceID
   * mix phoenix.gen.html Officer officers name icij_id valid_until country_codes countries node_id:integer:unique sourceID
   * mix phoenix.gen.html Entity entities name original_name former_name jurisdiction jurisdiction_description company_type address internal_id incorporation_date:date inactivation_date:date struck_off_date:date dorm_date:date status service_provider ibcRUC country_codes countries note valid_until node_id:integer:unique sourceID
   * mix phoenix.gen.html Edge edges node_1:integer rel_type node_2:integer
   
-  * mix phoenix.gen.html Edge edges node_1:references:
-
 ## Learn more
 
   * Official website: http://www.phoenixframework.org/
