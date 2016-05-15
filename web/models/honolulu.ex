@@ -31,38 +31,6 @@ defmodule Offshore.Honolulu do
   end
   def connect_edge_from(_node_id, _edge), do: []
 
-  # %Offshore.Officer{__meta__: #Ecto.Schema.Metadata<:loaded>,
-  # countries: "United States", country_codes: "USA", icij_id: nil, id: 14171,
-  # inserted_at: #Ecto.DateTime<2016-05-15 04:57:50>, name: "Joseph Y. Sotomura",
-  # node_id: 82342, sourceID: "Offshore Leaks",
-  # updated_at: #Ecto.DateTime<2016-05-15 04:57:50>,
-  # valid_until: "The Offshore Leaks data is current through 2010"}
-
-  # %Offshore.Intermediary{__meta__: #Ecto.Schema.Metadata<:loaded>, address: nil,
-  #  countries: "United States", country_codes: "USA", id: 26755,
-  #  inserted_at: #Ecto.DateTime<2016-05-15 04:55:56>, internal_id: nil,
-  #  name: "Grant Koichi Kidani", node_id: 291339, sourceID: "Offshore Leaks",
-  #  status: nil, updated_at: #Ecto.DateTime<2016-05-15 04:55:56>,
-  #  valid_until: "The Offshore Leaks data is current through 2010"}
-
-  # %Offshore.Entity{__meta__: #Ecto.Schema.Metadata<:loaded>,
-  #  address: "3rd Floor, BCI Building P.O. Box 208 Avarua, Rarotonga COOK ISLANDS;300 Kidani Law Center 233 Merchant Street Honolulu, HI 96813-2995 HAWAII",
-  #  company_type: "Cook Islands Asset Protection Trust - 3520A",
-  #  countries: "United States;Cook Islands", country_codes: "USA;COK",
-  #  dorm_date: nil, former_name: nil, ibcRUC: "5281/2005", id: 34760,
-  #  inactivation_date: nil, incorporation_date: #Ecto.Date<2005-07-05>,
-  #  inserted_at: #Ecto.DateTime<2016-05-15 06:24:09>, internal_id: nil,
-  #  jurisdiction: "COOK", jurisdiction_description: "Cook Islands",
-  #  name: "Laksmi Trust", node_id: 172633, note: nil, original_name: nil,
-  #  service_provider: "Portcullis Trustnet", sourceID: "Offshore Leaks", ...}
-  
-  # %Offshore.Address{__meta__: #Ecto.Schema.Metadata<:loaded>,
-  # address: "MARIA MOKOLOMBAN 357 OPIHIKAO PL HONOLULU HI 96825, USA",
-  # countries: "United States", country_codes: "USA",
-  # icij_id: "C9FC28123A52ED8A0D78CE56F8BF0638", id: 408576,
-  # inserted_at: #Ecto.DateTime<2016-05-12 09:43:00>, node_id: 14049566,
-  # sourceID: "Panama Papers", updated_at: #Ecto.DateTime<2016-05-12 09:43:00>,
-  # valid_until: "The Panama Papers  data is current through 2015"}
   def combine(%Entity{name: name, original_name: original_name, former_name: former_name, company_type: company_type, address: entity_address, node_id: node_id},
         %Address{address: address}) do
     %{address: address,
