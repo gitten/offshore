@@ -33,6 +33,10 @@ Ready to run in production? Please [check our deployment guides](http://www.phoe
 
 ## Generate
 
+You can run the `priv/repo/panana_seeds.exs` script after putting the csv data files in `priv/repo/data`. Download the data from the [ICIJ website](https://offshoreleaks.icij.org/pages/database).
+
+Before loading the data, you'll need to create the tables an Ecto schemas. YMMV, but you can use the generators if you want controllers and views too.
+
   * mix phoenix.gen.html Address addresses address icij_id valid_until country_codes countries node_id:integer:unique sourceID
   * mix phoenix.gen.html Intermediary intermediaries name internal_id address valid_until country_codes countries status node_id:integer:unique sourceID
   * mix phoenix.gen.html Officer officers name icij_id valid_until country_codes countries node_id:integer:unique sourceID
