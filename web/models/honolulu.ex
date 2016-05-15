@@ -20,7 +20,7 @@ defmodule Offshore.Honolulu do
     ++ (Repo.all from i in Intermediary,
       where: i.node_id == ^node_id)
   end
-  
+
   def connect_edge_from(node_id, %Edge{node_1: nid1, node_2: nid2})
   when node_id == nid1 do
     node_from(nid2)
@@ -32,9 +32,12 @@ defmodule Offshore.Honolulu do
   def connect_edge_from(_node_id, _edge), do: []
 
   def combine(%Entity{name: name, original_name: original_name, former_name: former_name, company_type: company_type, address: entity_address, node_id: node_id},
-        %Address{address: address}) do
+        %Address{address: address, node_id: address_node_id}) do
     %{address: address,
-      type: "officer",
+      address_node_id: address_node_id,
+      address_url: "https://offshoreleaks.icij.org/nodes/#{address_node_id}",
+      type: "entity",
+      entity_node_id: node_id,
       name: name,
       original_name: original_name,
       former_name: former_name,
@@ -44,17 +47,23 @@ defmodule Offshore.Honolulu do
     }
   end
   def combine(%Officer{name: name, node_id: node_id},
-        %Address{address: address}) do
+        %Address{address: address, node_id: address_node_id}) do
     %{address: address,
+      address_node_id: address_node_id,
+      address_url: "https://offshoreleaks.icij.org/nodes/#{address_node_id}",
       type: "officer",
+      officer_node_id: node_id,
       name: name,
       url: "https://offshoreleaks.icij.org/nodes/#{node_id}"
     }
   end
   def combine(%Intermediary{name: name, node_id: node_id},
-        %Address{address: address}) do
+        %Address{address: address, node_id: address_node_id}) do
     %{address: address,
+      address_node_id: address_node_id,
+      address_url: "https://offshoreleaks.icij.org/nodes/#{address_node_id}",
       type: "intermediary",
+      intermediary_node_id: node_id,
       name: name,
       url: "https://offshoreleaks.icij.org/nodes/#{node_id}"
     }
@@ -66,7 +75,6 @@ defmodule Offshore.Honolulu do
 
     Enum.flat_map(edges, &connect_edge_from(node_id, &1))
     |> Enum.map(&combine(&1, address))
-
   end
  
   def nodes() do
