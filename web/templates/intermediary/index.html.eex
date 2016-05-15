@@ -1,0 +1,42 @@
+<h2>Listing intermediaries</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Internal</th>
+      <th>Address</th>
+      <th>Valid until</th>
+      <th>Country codes</th>
+      <th>Countries</th>
+      <th>Status</th>
+      <th>Node</th>
+      <th>Sourceid</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for intermediary <- @intermediaries do %>
+    <tr>
+      <td><%= intermediary.name %></td>
+      <td><%= intermediary.internal_id %></td>
+      <td><%= intermediary.address %></td>
+      <td><%= intermediary.valid_until %></td>
+      <td><%= intermediary.country_codes %></td>
+      <td><%= intermediary.countries %></td>
+      <td><%= intermediary.status %></td>
+      <td><%= intermediary.node_id %></td>
+      <td><%= intermediary.sourceID %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: intermediary_path(@conn, :show, intermediary), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: intermediary_path(@conn, :edit, intermediary), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: intermediary_path(@conn, :delete, intermediary), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New intermediary", to: intermediary_path(@conn, :new) %>

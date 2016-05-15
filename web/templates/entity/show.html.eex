@@ -1,0 +1,113 @@
+<h2>Show entity</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @entity.name %>
+  </li>
+
+  <li>
+    <strong>Original name:</strong>
+    <%= @entity.original_name %>
+  </li>
+
+  <li>
+    <strong>Former name:</strong>
+    <%= @entity.former_name %>
+  </li>
+
+  <li>
+    <strong>Jurisdiction:</strong>
+    <%= @entity.jurisdiction %>
+  </li>
+
+  <li>
+    <strong>Jurisdiction description:</strong>
+    <%= @entity.jurisdiction_description %>
+  </li>
+
+  <li>
+    <strong>Company type:</strong>
+    <%= @entity.company_type %>
+  </li>
+
+  <li>
+    <strong>Address:</strong>
+    <%= @entity.address %>
+  </li>
+
+  <li>
+    <strong>Internal:</strong>
+    <%= @entity.internal_id %>
+  </li>
+
+  <li>
+    <strong>Incorporation date:</strong>
+    <%= @entity.incorporation_date %>
+  </li>
+
+  <li>
+    <strong>Inactivation date:</strong>
+    <%= @entity.inactivation_date %>
+  </li>
+
+  <li>
+    <strong>Struck off date:</strong>
+    <%= @entity.struck_off_date %>
+  </li>
+
+  <li>
+    <strong>Dorm date:</strong>
+    <%= @entity.dorm_date %>
+  </li>
+
+  <li>
+    <strong>Status:</strong>
+    <%= @entity.status %>
+  </li>
+
+  <li>
+    <strong>Service provider:</strong>
+    <%= @entity.service_provider %>
+  </li>
+
+  <li>
+    <strong>Ibcruc:</strong>
+    <%= @entity.ibcRUC %>
+  </li>
+
+  <li>
+    <strong>Country codes:</strong>
+    <%= @entity.country_codes %>
+  </li>
+
+  <li>
+    <strong>Countries:</strong>
+    <%= @entity.countries %>
+  </li>
+
+  <li>
+    <strong>Note:</strong>
+    <%= @entity.note %>
+  </li>
+
+  <li>
+    <strong>Valid until:</strong>
+    <%= @entity.valid_until %>
+  </li>
+
+  <li>
+    <strong>Node:</strong>
+    <%= @entity.node_id %>
+  </li>
+
+  <li>
+    <strong>Sourceid:</strong>
+    <%= @entity.sourceID %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: entity_path(@conn, :edit, @entity) %>
+<%= link "Back", to: entity_path(@conn, :index) %>

@@ -1,0 +1,43 @@
+<h2>Show officer</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @officer.name %>
+  </li>
+
+  <li>
+    <strong>Icij:</strong>
+    <%= @officer.icij_id %>
+  </li>
+
+  <li>
+    <strong>Valid until:</strong>
+    <%= @officer.valid_until %>
+  </li>
+
+  <li>
+    <strong>Country codes:</strong>
+    <%= @officer.country_codes %>
+  </li>
+
+  <li>
+    <strong>Countries:</strong>
+    <%= @officer.countries %>
+  </li>
+
+  <li>
+    <strong>Node:</strong>
+    <%= @officer.node_id %>
+  </li>
+
+  <li>
+    <strong>Sourceid:</strong>
+    <%= @officer.sourceID %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: officer_path(@conn, :edit, @officer) %>
+<%= link "Back", to: officer_path(@conn, :index) %>

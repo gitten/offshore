@@ -38,7 +38,8 @@ defmodule Offshore.Mixfile do
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:gettext, "~> 0.9"},
      {:cowboy, "~> 1.0"},
-     {:csv, "~> 1.4.0"}]
+     {:csv, "~> 1.4.0"},
+     {:timex, "~> 2.1.4"}]
   end
 
   # Aliases are shortcut or tasks specific to the current project.

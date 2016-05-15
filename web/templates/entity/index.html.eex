@@ -1,0 +1,66 @@
+<h2>Listing entities</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Original name</th>
+      <th>Former name</th>
+      <th>Jurisdiction</th>
+      <th>Jurisdiction description</th>
+      <th>Company type</th>
+      <th>Address</th>
+      <th>Internal</th>
+      <th>Incorporation date</th>
+      <th>Inactivation date</th>
+      <th>Struck off date</th>
+      <th>Dorm date</th>
+      <th>Status</th>
+      <th>Service provider</th>
+      <th>Ibcruc</th>
+      <th>Country codes</th>
+      <th>Countries</th>
+      <th>Note</th>
+      <th>Valid until</th>
+      <th>Node</th>
+      <th>Sourceid</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for entity <- @entities do %>
+    <tr>
+      <td><%= entity.name %></td>
+      <td><%= entity.original_name %></td>
+      <td><%= entity.former_name %></td>
+      <td><%= entity.jurisdiction %></td>
+      <td><%= entity.jurisdiction_description %></td>
+      <td><%= entity.company_type %></td>
+      <td><%= entity.address %></td>
+      <td><%= entity.internal_id %></td>
+      <td><%= entity.incorporation_date %></td>
+      <td><%= entity.inactivation_date %></td>
+      <td><%= entity.struck_off_date %></td>
+      <td><%= entity.dorm_date %></td>
+      <td><%= entity.status %></td>
+      <td><%= entity.service_provider %></td>
+      <td><%= entity.ibcRUC %></td>
+      <td><%= entity.country_codes %></td>
+      <td><%= entity.countries %></td>
+      <td><%= entity.note %></td>
+      <td><%= entity.valid_until %></td>
+      <td><%= entity.node_id %></td>
+      <td><%= entity.sourceID %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: entity_path(@conn, :show, entity), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: entity_path(@conn, :edit, entity), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: entity_path(@conn, :delete, entity), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New entity", to: entity_path(@conn, :new) %>

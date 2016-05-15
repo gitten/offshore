@@ -18,6 +18,10 @@ defmodule Offshore.Router do
 
     get "/", PageController, :index
     resources "/addresses", AddressController
+    resources "/intermediaries", IntermediaryController
+    resources "/officers", OfficerController
+    resources "/entities", EntityController
+    resources "/edges", EdgeController
   end
 
   # Other scopes may use custom stacks.

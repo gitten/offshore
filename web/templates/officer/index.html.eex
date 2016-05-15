@@ -1,0 +1,38 @@
+<h2>Listing officers</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Icij</th>
+      <th>Valid until</th>
+      <th>Country codes</th>
+      <th>Countries</th>
+      <th>Node</th>
+      <th>Sourceid</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for officer <- @officers do %>
+    <tr>
+      <td><%= officer.name %></td>
+      <td><%= officer.icij_id %></td>
+      <td><%= officer.valid_until %></td>
+      <td><%= officer.country_codes %></td>
+      <td><%= officer.countries %></td>
+      <td><%= officer.node_id %></td>
+      <td><%= officer.sourceID %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: officer_path(@conn, :show, officer), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: officer_path(@conn, :edit, officer), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: officer_path(@conn, :delete, officer), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New officer", to: officer_path(@conn, :new) %>

@@ -1,0 +1,6 @@
+<h2>Edit officer</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: officer_path(@conn, :update, @officer) %>
+
+<%= link "Back", to: officer_path(@conn, :index) %>

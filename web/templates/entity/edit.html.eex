@@ -1,0 +1,6 @@
+<h2>Edit entity</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: entity_path(@conn, :update, @entity) %>
+
+<%= link "Back", to: entity_path(@conn, :index) %>

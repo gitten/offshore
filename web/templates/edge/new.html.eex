@@ -1,0 +1,6 @@
+<h2>New edge</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: edge_path(@conn, :create) %>
+
+<%= link "Back", to: edge_path(@conn, :index) %>

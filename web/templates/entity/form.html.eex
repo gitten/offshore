@@ -1,0 +1,137 @@
+<%= form_for @changeset, @action, fn f -> %>
+  <%= if @changeset.action do %>
+    <div class="alert alert-danger">
+      <p>Oops, something went wrong! Please check the errors below.</p>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= label f, :name, class: "control-label" %>
+    <%= text_input f, :name, class: "form-control" %>
+    <%= error_tag f, :name %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :original_name, class: "control-label" %>
+    <%= text_input f, :original_name, class: "form-control" %>
+    <%= error_tag f, :original_name %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :former_name, class: "control-label" %>
+    <%= text_input f, :former_name, class: "form-control" %>
+    <%= error_tag f, :former_name %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :jurisdiction, class: "control-label" %>
+    <%= text_input f, :jurisdiction, class: "form-control" %>
+    <%= error_tag f, :jurisdiction %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :jurisdiction_description, class: "control-label" %>
+    <%= text_input f, :jurisdiction_description, class: "form-control" %>
+    <%= error_tag f, :jurisdiction_description %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :company_type, class: "control-label" %>
+    <%= text_input f, :company_type, class: "form-control" %>
+    <%= error_tag f, :company_type %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :address, class: "control-label" %>
+    <%= text_input f, :address, class: "form-control" %>
+    <%= error_tag f, :address %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :internal_id, class: "control-label" %>
+    <%= text_input f, :internal_id, class: "form-control" %>
+    <%= error_tag f, :internal_id %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :incorporation_date, class: "control-label" %>
+    <%= date_select f, :incorporation_date, class: "form-control" %>
+    <%= error_tag f, :incorporation_date %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :inactivation_date, class: "control-label" %>
+    <%= date_select f, :inactivation_date, class: "form-control" %>
+    <%= error_tag f, :inactivation_date %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :struck_off_date, class: "control-label" %>
+    <%= date_select f, :struck_off_date, class: "form-control" %>
+    <%= error_tag f, :struck_off_date %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :dorm_date, class: "control-label" %>
+    <%= date_select f, :dorm_date, class: "form-control" %>
+    <%= error_tag f, :dorm_date %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :status, class: "control-label" %>
+    <%= text_input f, :status, class: "form-control" %>
+    <%= error_tag f, :status %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :service_provider, class: "control-label" %>
+    <%= text_input f, :service_provider, class: "form-control" %>
+    <%= error_tag f, :service_provider %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :ibcRUC, class: "control-label" %>
+    <%= text_input f, :ibcRUC, class: "form-control" %>
+    <%= error_tag f, :ibcRUC %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :country_codes, class: "control-label" %>
+    <%= text_input f, :country_codes, class: "form-control" %>
+    <%= error_tag f, :country_codes %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :countries, class: "control-label" %>
+    <%= text_input f, :countries, class: "form-control" %>
+    <%= error_tag f, :countries %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :note, class: "control-label" %>
+    <%= text_input f, :note, class: "form-control" %>
+    <%= error_tag f, :note %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :valid_until, class: "control-label" %>
+    <%= text_input f, :valid_until, class: "form-control" %>
+    <%= error_tag f, :valid_until %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :node_id, class: "control-label" %>
+    <%= number_input f, :node_id, class: "form-control" %>
+    <%= error_tag f, :node_id %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :sourceID, class: "control-label" %>
+    <%= text_input f, :sourceID, class: "form-control" %>
+    <%= error_tag f, :sourceID %>
+  </div>
+
+  <div class="form-group">
+    <%= submit "Submit", class: "btn btn-primary" %>
+  </div>
+<% end %>

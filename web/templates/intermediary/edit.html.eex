@@ -1,0 +1,6 @@
+<h2>Edit intermediary</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: intermediary_path(@conn, :update, @intermediary) %>
+
+<%= link "Back", to: intermediary_path(@conn, :index) %>

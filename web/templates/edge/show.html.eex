@@ -1,0 +1,23 @@
+<h2>Show edge</h2>
+
+<ul>
+
+  <li>
+    <strong>Node 1:</strong>
+    <%= @edge.node_1 %>
+  </li>
+
+  <li>
+    <strong>Rel type:</strong>
+    <%= @edge.rel_type %>
+  </li>
+
+  <li>
+    <strong>Node 2:</strong>
+    <%= @edge.node_2 %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: edge_path(@conn, :edit, @edge) %>
+<%= link "Back", to: edge_path(@conn, :index) %>
