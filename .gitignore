@@ -29,3 +29,7 @@ erl_crash.dump
 
 # Data
 priv/repo/data
+
+#Elm
+web/elm/elm-stuff
+web/static/vendor/offshore.js
